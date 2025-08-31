@@ -1,0 +1,222 @@
+{
+    "info": {
+        "_postman_id": "technician-api-collection",
+        "name": "Technician API",
+        "description": "Collection for testing Technician Management API endpoints",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Technicians",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/api/all-technicians",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "all-technicians"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Add New Technician",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"1234567890\",\n  \"specialty\": \"Plumbing\",\n  \"status\": \"available\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/add-technicians",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "add-technicians"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Technician by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/api/technicians/{{technician_id}}",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "technicians",
+                        "{{technician_id}}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Technician Status",
+            "request": {
+                "method": "PATCH",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"status\": \"busy\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/technicians/{{technician_id}}/status",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "technicians",
+                        "{{technician_id}}",
+                        "status"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Technician",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"John Smith\",\n  \"email\": \"johnsmith@example.com\",\n  \"phone\": \"9876543210\",\n  \"specialty\": \"Electrical\",\n  \"status\": \"available\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/technicians/{{technician_id}}",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "technicians",
+                        "{{technician_id}}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Technician",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/api/technicians/{{technician_id}}",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "technicians",
+                        "{{technician_id}}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Technicians by Specialty",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/api/technicians/specialty/Plumbing",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "technicians",
+                        "specialty",
+                        "Plumbing"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Available Technicians",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{base_url}}/api/technicians/status/available",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "technicians",
+                        "status",
+                        "available"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "https://nivasa-production-7aa9.up.railway.app",
+            "type": "string"
+        },
+        {
+            "key": "technician_id",
+            "value": "",
+            "type": "string"
+        }
+    ]
+}
