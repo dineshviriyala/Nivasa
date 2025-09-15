@@ -8,7 +8,7 @@ A **modern, full-stack web application** for managing apartment communities, bui
 
 ##  Live Demo
 
->  [website](https://nivasa-production.up.railway.app/)
+>  [website](https://nivasa-vert.vercel.app/)
 
 
 
@@ -122,3 +122,4 @@ Please open an issue first to discuss major changes.
 
 **Built with ❤️ for apartment communities.**
 "# Nivasa" 
+
